@@ -1,0 +1,29 @@
+{
+  "name": "fishing-game-phaser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Landpad/fishing-game-phaser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Landpad/fishing-game-phaser/issues"
+  },
+  "homepage": "https://github.com/Landpad/fishing-game-phaser#readme",
+  "description": "",
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+  
+}
+
