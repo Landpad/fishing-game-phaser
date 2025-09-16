@@ -1,0 +1,63 @@
+@startuml
+
+' ==== Classes ====
+
+class GameScene {    
+    +preload(): void
+    +create(): void
+    +update(time: number, delta: number): void
+}
+
+class Fish{
+    +species: String
+    -ability: Ability    
+    +posX: Int
+    +posY: Int
+    -velocity: Int
+    -direction: Int
+    +getAbility(): Ability
+}
+
+class Marlin extends Fish {
+    -minSpeed: Int
+    -maxSpeed: Int
+}
+
+class Ability {
+    +name: String
+    -type: String
+    -effect: String
+}
+
+class Harpoon {
+    +name: String
+    -rotationSpeed: Int
+    -launchSpeed: Int
+    -returnSpeed: Int
+    -type: String    
+}
+
+class Ship{
+    +name: String
+    -shipVelocity: Int
+    -maxFuel: Int
+    -maxHealth: Int
+}
+
+class Player {
+    +name: String
+    -harpoon: Harpoon
+    -ship: Ship
+    -fishesAbilities: Fish[*]
+
+}
+' ==== Relations ====
+
+GameScene --> Fish
+Fish --> Ability
+Marlin --|> Fish
+Player "1" o-- "1" Harpoon
+Player "1" o-- "1" Ship
+Player --> Fish 
+
+@enduml
